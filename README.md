@@ -1,4 +1,4 @@
-# Computer-Graphics-Project
+# Computer Graphics Project - Starship Strike
 This project is a space-shooting game that has been implemented in C++ using OpenGL. 
 The game objective is to shoot and kill all the enemies on the screen. 
 The game is divided into two levels. 
