@@ -336,19 +336,19 @@ void intro()
 
 	glColor3f(1.0, 0.0, 0.0);
 
-	zeelFontDisplay(-200 + intro_speed_val, 750, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-180 + intro_speed_val, 700, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-150 + intro_speed_val, 650, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-130 + intro_speed_val, 600, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-100 + intro_speed_val, 550, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-80 + intro_speed_val, 500, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-50 + intro_speed_val, 400, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-80 + intro_speed_val, 300, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-100 + intro_speed_val, 250, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-130 + intro_speed_val, 200, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-150 + intro_speed_val, 150, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-180 + intro_speed_val, 100, ": WECOME TO BOSS LEVEL :");
-	zeelFontDisplay(-200 + intro_speed_val, 50, ": WECOME TO BOSS LEVEL :");
+	zeelFontDisplay(-200 + intro_speed_val, 750, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-180 + intro_speed_val, 700, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-150 + intro_speed_val, 650, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-130 + intro_speed_val, 600, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-100 + intro_speed_val, 550, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-80 + intro_speed_val, 500, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-50 + intro_speed_val, 400, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-80 + intro_speed_val, 300, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-100 + intro_speed_val, 250, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-130 + intro_speed_val, 200, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-150 + intro_speed_val, 150, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-180 + intro_speed_val, 100, ": WELCOME TO BOSS LEVEL :");
+	zeelFontDisplay(-200 + intro_speed_val, 50, ": WELCOME TO BOSS LEVEL :");
 
 	intro_speed_val += intro_speed;
 
@@ -770,7 +770,7 @@ void game()
 	char point = score + '0';
 
 	glColor3f(1.0, 1.0, 1.0);
-	zeelFontDisplay(50, 750, "YOUR SCORE : ");
+	zeelFontDisplay(50, 750, "YOUR SCORE :");
 	glColor3f(1.0, 1.0, 1.0);
 	zeelFontDisplay(190, 750, &point);
 
@@ -834,7 +834,7 @@ void menu() // main menu
 	astron();
 
 	glColor3f(1.0, 1.0, 1.0);
-	zeelFontDisplay(330, 600, "ZEEL'S COSMOS ");
+	zeelFontDisplay(330, 600, "Starship Strike");
 
 	glColor3f(1.0, 0.0, 1.0);
 	zeelFontDisplay(380, 400, "PLAY");
@@ -876,8 +876,8 @@ void astron()
 
 	for (astron = 0; astron < 10; astron++)
 	{
-		float x = rand() % 800;
-		float y = rand() % 800;
+		float x = 10 % 800;
+		float y = 20 % 800;
 		glColor3f(1.0, 1.0, 0.0);
 		zeelCircleDisplay(x, y - 10, 2);
 	}
@@ -938,7 +938,7 @@ int main(int argc, char** argv)
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(800, 800);
 	glutInitWindowPosition(0, 0);
-	glutCreateWindow("Zeel's Space Fighter");
+	glutCreateWindow("Starship Strike");
 	glClear(GL_COLOR_BUFFER_BIT);
 	glClearColor(0.0, 0.0, 0.0, 1.0);
 	glMatrixMode(GL_PROJECTION);
@@ -948,6 +948,6 @@ int main(int argc, char** argv)
 
 	// here are the new entries
 	glutKeyboardFunc(processKeyformenu);
-
+	
 	glutMainLoop();
 }
